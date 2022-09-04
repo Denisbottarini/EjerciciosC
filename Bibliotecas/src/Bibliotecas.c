@@ -11,6 +11,8 @@
 
 int main()
 {
+	setbuf(stdout,NULL);
+
     int numero = 4;
     int* pNumero = &numero;
     int otroNumero = 1000;
@@ -20,7 +22,7 @@ int main()
 
 
     printf("Contenido de pNumero\n");
-    printf("Valor de pNumero: %d\n\n", *pNumero); //accedo al valor que guarda la direccion de ememoria a la que apunta pNumero
+    printf("Valor de pNumero: %d\n\n", *pNumero); //accedo al valor que guarda la direccion de memoria a la que apunta pNumero
 
     numero = 8; //cambio el valor de numero
 
