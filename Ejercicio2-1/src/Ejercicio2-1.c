@@ -25,13 +25,12 @@ int main(void)
 	int acumulador = 0;
 	int i;
 
-	for(i = 0; i < 5; i++)
-	{
+	for(i = 0; i < 5; i++){
+
 		printf("Ingresar numero: ");
 		scanf("%d", &numero);
 
 		acumulador+= numero;
-
 	}
 
 	promedio = (float) acumulador/5;

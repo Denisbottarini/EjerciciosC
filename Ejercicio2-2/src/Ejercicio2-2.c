@@ -36,10 +36,8 @@ int main(void)
 
 	for(i = 0; i < 10; i++)
 	{
-
 		printf("Ingresar un numero entero: ");
 		scanf("%d", &numeroEntero);
-
 
 		if(numeroEntero % 2 == 0)
 		{

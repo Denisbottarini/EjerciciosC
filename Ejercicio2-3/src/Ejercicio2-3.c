@@ -80,12 +80,10 @@ int main(void)
 		}while(!(temperaturaCorporal > 34));
 
 		do{
-
 			printf("\nIngresar el genero del pasajero, (f) para femenino, (m) para masculino, (o) para no binario: ");
 			fflush(stdin);
 			scanf("%c", &genero);
 	    }while(!(genero == 'f' || genero == 'm' || genero == 'o'));
-
 
 
 		if(estadoCivil == 'v' && edad > 60)

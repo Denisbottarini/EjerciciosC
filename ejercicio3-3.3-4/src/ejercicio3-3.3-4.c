@@ -8,8 +8,9 @@ Especializar la función anterior para que permita validar el entero ingresado e
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "validacion.h"
 
-int funcionNumeroEntero();
+//int funcionNumeroEntero(); LA COMENTO POR QUE YA LA INCLUYO EN LA BIBLIOTECA QUE CREE "VALIDACION.H"
 
 int main(void) {
 
@@ -22,7 +23,7 @@ int main(void) {
 
 	return 0;
 }
-
+/*
 int funcionNumeroEntero(){
 
 	int numero;
@@ -33,5 +34,5 @@ int funcionNumeroEntero(){
 	}while(!(numero >= 1 && numero <= 20));
 
 	return numero;
-
 }
+*/ //LO COMENTO POR QUE YA REALICE UNA BIBLIOTECA PARA ESTE EJERCICIO
