@@ -1,17 +1,12 @@
 /*
  ============================================================================
- Name        : Ejercicio3-5.c
- Author      : Denis Bottarini
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Realizar un programa en donde se puedan utilizar los prototipos de la función Sumar en sus 4 combinaciones.
+ int Sumar1(int, int);
+ int Sumar2(void);
+ void Sumar3(int, int);
+ void Sumar4(void);
  ============================================================================
-Realizar un programa en donde se puedan utilizar los prototipos de la función Sumar en sus 4 combinaciones.
-int Sumar1(int, int);
-int Sumar2(void);
-void Sumar3(int, int);
-void Sumar4(void);
-*/
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,7 +27,7 @@ int main(void) {
 	int resultadoSumar1;
 	int resultadoSumar2;
 
-	printf("Ingresar el numero: ");
+	printf("\nIngresar el numero: ");
 	scanf("%d", &numero1);
 	printf("\nIngresar el numero: ");
 	scanf("%d", &numero2);
@@ -56,7 +51,7 @@ int main(void) {
 
 	return 0;
 }
-//Esta funcion realiza una suma y retorna el resultado cuando se la llama/invoca en la funcion MAIN
+
 int sumar1(int numeroA, int numeroB) {
 
 	int resultado;
@@ -65,7 +60,7 @@ int sumar1(int numeroA, int numeroB) {
 
 	return resultado;
 }
-//Esta funcion realiza una suma y retorna el resultado cuando se la llama/invoca en la funcion MAIN
+
 int sumar2(void) {
 
 	int numeroVacio1;
@@ -74,14 +69,14 @@ int sumar2(void) {
 
 	printf("\nIngresar el primer numero: ");
 	scanf("%d", &numeroVacio1);
-	printf("\nIngresar el segundo numero: ");
+	printf("\nIngresar el primer numero: ");
 	scanf("%d", &numeroVacio2);
 
 	resultado = numeroVacio1 + numeroVacio2;
 
 	return resultado;
 }
-//Estan funcion realiza una suma y no tiene un retorno entonces no es necesario crear una variable en el MAIN para invocar la funcion, se coloca sola
+
 void sumar3(int numeroC, int numeroD) {
 
 	int resultado3;
@@ -90,7 +85,7 @@ void sumar3(int numeroC, int numeroD) {
 
 	printf("\nEl resultado de suma 3 es: %d\n", resultado3);
 }
-//Estan funcion realiza una suma y no tiene un retorno entonces no es necesario crear una variable en el MAIN para invocar la funcion, se coloca sola
+
 void sumar4(void) {
 
 	int numeroVacio3;
@@ -99,13 +94,14 @@ void sumar4(void) {
 
 	printf("\nIngresar el primer numero: ");
 	scanf("%d", &numeroVacio3);
-	printf("\nIngresar el segundo numero: ");
+	printf("\nIngresar el primer numero: ");
 	scanf("%d", &numeroVacio4);
 
 	resultado = numeroVacio3 + numeroVacio4;
 
 	printf("\nEl resultado de suma 4 es: %d\n", resultado);
 }
+
 /*
  TIPOS DE FUNCIONES
 
@@ -120,6 +116,6 @@ void sumar4(void) {
 
  NO RECIBE PARAMETRO - NO RETORNA PARAMETRO
  VOID (VOID)
-*/
+ */
 
 //CON CTRL + SHIFT Y f identa el codigo SINO otra forma ctrl + A entro a source y luego a format

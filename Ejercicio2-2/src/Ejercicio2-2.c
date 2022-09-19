@@ -1,89 +1,87 @@
 /*
  ============================================================================
  Name        : Ejercicio2-2.c
- Author      : 
+ Author      : DenisBottarini
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
- Ingresar 10 números enteros, distintos de cero. Mostrar:
- A)Cantidad de pares e impares.
- B)El menor número ingresado.
- C)De los pares el mayor número ingresado.
- D)Suma de los positivos.
- E)Producto de los negativos.
  */
-
+/*
+Ejercicio 2-2:
+Ingresar 10 números enteros, distintos de cero. Mostrar:
+A) Cantidad de pares e impares.
+B) El menor número ingresado.
+C) De los pares el mayor número ingresado.
+D) Suma de los positivos.
+E) Producto de los negativos.
+*/
 #include <stdio.h>
 #include <stdlib.h>
-#define ITERACION 5
 
-int main(void) {
+int main(void)
+{
 	setbuf(stdout, NULL);
 
 	int numeroEntero;
-	//A)
-	int contadorNumerosPares;
-	int contadorNumerosImpares;
-	//B)
+	int contadorPar = 0;
+	int contadorImpar = 0;
 	int menorNumeroIngresado;
-	int flag;
-	//C)
-	int mayorNumeroPar;
-	int flag2;
-	//D)
-	int acumuladorNumerosPositivos;
-	//E)
-	int productoNumerosNegativos;
+	int mayorNumeroIngresadoPar;
+	int acumuladorNumerosPositivos = 0;
+	int acumuladorProductoNegativos = 1;
+	int i;
+	int flag = 0;
+	int flag2 = 0;
 
-	contadorNumerosPares = 0;
-	contadorNumerosImpares = 0;
-	flag = 0;
-	flag2 = 0;
-	acumuladorNumerosPositivos = 0;
-	productoNumerosNegativos = 1;
+	for(i = 0; i < 10; i++)
+	{
+		printf("Ingresar un numero entero: ");
+		scanf("%d", &numeroEntero);
 
-	for (int i = 0; i < ITERACION; i++) {
+		if(numeroEntero % 2 == 0)
+		{
+			contadorPar++;
 
-		do {
-			printf("\nIngresar numero entero, debe ser distinto de cero(0): ");
-			scanf("%d", &numeroEntero);
-		} while (!(numeroEntero != 0));
-
-		if (numeroEntero % 2 == 0) {
-			contadorNumerosPares++;
-
-			if (flag2 == 0 || mayorNumeroPar < numeroEntero) {
-				mayorNumeroPar = numeroEntero;
-				flag2 = 1;
+			if(flag2 == 0 || mayorNumeroIngresadoPar < numeroEntero)
+			{
+				mayorNumeroIngresadoPar = numeroEntero;
+			    flag2 = 1;
 			}
-		} else {
-			contadorNumerosImpares++;
+		}else
+		{
+			contadorImpar++;
 		}
 
-		if (flag == 0 || menorNumeroIngresado > numeroEntero) {
+		if(flag == 0 || menorNumeroIngresado > numeroEntero)
+		{
 			menorNumeroIngresado = numeroEntero;
 			flag = 1;
 		}
 
-		if (numeroEntero >= 0) {
-			acumuladorNumerosPositivos += numeroEntero;
-		} else {
-			productoNumerosNegativos *= numeroEntero;
+		if(numeroEntero > 0)
+		{
+			acumuladorNumerosPositivos+= numeroEntero;
+		}else
+		{
+			acumuladorProductoNegativos *= numeroEntero;
 		}
 
+
 	}
-	//A)Cantidad de pares e impares.
-	printf("\nLa cantidad de numeros pares es: %d\n", contadorNumerosPares);
-	printf("\nLa cantidad de numeros impares es: %d\n", contadorNumerosImpares);
-	// B)El menor número ingresado.
-	printf("\nEl menor número ingresado es: %d\n", menorNumeroIngresado);
-	//C)De los pares el mayor número ingresado.
-	printf("\nEl mayor número ingresado es: %d\n", mayorNumeroPar);
-	//D)Suma de los positivos.
-	printf("\nLa suma de los positivos es: %d\n", acumuladorNumerosPositivos);
-	//E)Producto de los negativos.
-	printf("\nEl producto de los negativos es: %d\n", productoNumerosNegativos);
+
+	//A) Cantidad de pares e impares.
+	printf("\ncantidad de numeros pares es: %d", contadorPar);
+	printf("\n\ncantidad de numeros impares es: %d", contadorImpar);
+	//B) El menor número ingresado.
+	printf("\n\nEl menor numero ingresado es: %d", menorNumeroIngresado);
+	//C) De los pares el mayor número ingresado.
+	printf("\n\nEl mayor numero ingresado par es: %d", mayorNumeroIngresadoPar);
+	//D) Suma de los positivos.
+	printf("\n\nLa suma de los numeros positivos es: %d", acumuladorNumerosPositivos);
+	//E) Producto de los negativos.
+	printf("\n\nEl producto de los negativos es: %d", acumuladorProductoNegativos);
+
 
 	return 0;
 }
