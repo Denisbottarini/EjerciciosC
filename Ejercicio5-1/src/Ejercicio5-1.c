@@ -20,6 +20,7 @@ int main(void) {
 	int numero;
 	int numeros[NUM];
 	int i;
+	int suma = 0;
 
 	//Recorro para cargar en forma secuencial
 	for(i=0;i<NUM;i++)
