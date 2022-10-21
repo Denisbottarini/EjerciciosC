@@ -20,13 +20,14 @@ int main(void) {
 	int numero;
 	int numeros[NUM];
 	int i;
-	int suma = 0;
+	int longitud = sizeof numeros / sizeof numeros[0];
+	int sumatoria = 0;//Aquí vamos a almacenar cada valor
 
 	//Recorro para cargar en forma secuencial
 	for(i=0;i<NUM;i++)
 	{
 
-		printf("Ingrese los numeros: ");
+		printf("\nIngrese los numeros: ");
 		scanf("%d", &numero);
 		//En num escribo numeros en la posicion "i"
 		numeros[i] = numero;
@@ -39,5 +40,54 @@ int main(void) {
 		printf("%d ", numeros[i]);
 	}
 
-	return 0;
+	//sumo los numeros
+	for (i = 0; i < longitud; i++)
+	{
+		int numeroActual = numeros[i];
+		// Sumar el número actual a la sumatoria
+		sumatoria = sumatoria + numeroActual;
+		// También se puede sumar de forma más simple:
+		// sumatoria += numeroActual;
+	}
+
+	 printf("\t\tLa sumatoria es: %d\n", sumatoria);
+
+     return 0;
+
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#define NUM 5
+
+int main() {
+
+    int numero;
+    int i;
+	int numeros[NUM];
+	int longitud = sizeof numeros / sizeof numeros[0];
+    int sumatoria = 0;//Aquí vamos a almacenar cada valor
+
+	//Recorro para cargar en forma secuencial
+	for(i=0;i<NUM;i++)
+	{
+
+		printf("Ingrese los numeros: ");
+		scanf("%d", &numero);
+		//En num escribo numeros en la posicion "i"
+		numeros[i] = numero;
+
+	}
+
+    for (i = 0; i < longitud; i++) {
+        int numeroActual = numeros[i];
+        // Sumar el número actual a la sumatoria
+        sumatoria = sumatoria + numeroActual;
+        // También se puede sumar de forma más simple:
+        // sumatoria += numeroActual;
+    }
+    printf("La sumatoria es: %d", sumatoria);
+    return 0;
+}
+*/

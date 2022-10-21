@@ -18,7 +18,8 @@ int main(void) {
 
 	return 0;
 }
-int sortPerTypeAndDescriptionVehicle(sVehicle arrayVehicle[], int len) {
+// doble ordenamiento de array
+int sortPerTypeAndDescriptionVehicle(sVehicle arrayVehicle[], int len){
 
 	int rtn = ERROR;
 	sVehicle auxVehicle;
